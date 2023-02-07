@@ -1,10 +1,10 @@
 import AboutMe from './AboutMe';
-import NameTitle from './NameTitle';
+import NameAndTitle from './NameAndTitle';
 
 const Hero = () => {
 	return (
 		<>
-			<NameTitle />
+			<NameAndTitle />
 			<AboutMe />
 		</>
 	);

@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import Hero from './Slides/Widescreen/HeroSlide/Hero';
+import WideScreenHero from './Slides/Widescreen/HeroSlide/Hero';
 
 const GlobalStyle = createGlobalStyle`
-	* {
+	html, body {
 		margin: 0;
-		padding: 0%;
+		padding: 0;
 		box-sizing: border-box;
 	}
 `;
@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
 	return (
 		<>
-			<Hero />
+			<WideScreenHero />
 			<GlobalStyle />
 		</>
 	);
