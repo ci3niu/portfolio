@@ -1,6 +1,6 @@
 const AboutMe = () => {
 	return (
-		<div>
+		<div style={{ height: '100vh' }}>
 			<h2>AboutMe</h2>
 		</div>
 	);

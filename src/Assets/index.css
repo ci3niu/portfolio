@@ -2,3 +2,8 @@
 	font-family: 'SouthGreat';
 	src: url('./Fonts/SouthGreat/SouthGreat.ttf');
 }
+
+@font-face {
+	font-family: 'BergenSans';
+	src: url('./Fonts/BergenSans/BergenSans-Regular.otf');
+}

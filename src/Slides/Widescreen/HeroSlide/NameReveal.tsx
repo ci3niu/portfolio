@@ -22,7 +22,7 @@ const NameReveal: FC<NameRevealProps> = ({ text, fontFam, timeDelay }) => {
 
 	return (
 		<Stage>
-			<TextToReveal fontFam={fontFam} reveal={reveal}>
+			<TextToReveal fontFam={fontFam} reveal={reveal} fontSize={160}>
 				{text}
 			</TextToReveal>
 			<WhiteBlock />

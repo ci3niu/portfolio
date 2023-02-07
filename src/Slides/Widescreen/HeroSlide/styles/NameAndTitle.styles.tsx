@@ -13,7 +13,7 @@ export const moveUp = (init: number) => keyframes`
 export const hideWhiteBlocks = () => keyframes`
 0%{
     opacity: 1;
-    height: 50vh;
+    height: 100vh;
 }
 100%{
     opacity: 0;
@@ -40,21 +40,21 @@ export const WhiteBlock = styled.div`
 	position: absolute;
 	background-color: #fff;
 	width: 100%;
-	height: 50vh;
+	height: 25vh;
 	animation: ${hideWhiteBlocks} 0.5s linear forwards;
 	animation-delay: 2s;
 `;
 
 interface TextToRevealProps {
 	fontFam: string;
+	fontSize: number;
 	reveal: boolean;
 }
 
-// font-family: ${({ fontFam }) => fontFam};
 export const TextToReveal = styled.div<TextToRevealProps>`
-	font-family: 'SouthGreat';
+	font-family: ${({ fontFam }) => fontFam};
 	text-align: center;
-	font-size: 100px;
-	transform: translateY(${100 * 1.4}px);
+	font-size: ${({ fontSize }) => fontSize}px;
+	transform: translateY(${({ fontSize }) => fontSize * 1.4}px);
 	animation: ${({ reveal }) => (reveal ? moveUp(100) : 'none')} 1s cubic-bezier(0, 0.1, 0.12, 0.99) forwards;
 `;
