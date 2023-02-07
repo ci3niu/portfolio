@@ -44,3 +44,17 @@ export const WhiteBlock = styled.div`
 	animation: ${hideWhiteBlocks} 0.5s linear forwards;
 	animation-delay: 2s;
 `;
+
+interface TextToRevealProps {
+	fontFam: string;
+	reveal: boolean;
+}
+
+// font-family: ${({ fontFam }) => fontFam};
+export const TextToReveal = styled.div<TextToRevealProps>`
+	font-family: 'SouthGreat';
+	text-align: center;
+	font-size: 100px;
+	transform: translateY(${100 * 1.4}px);
+	animation: ${({ reveal }) => (reveal ? moveUp(100) : 'none')} 1s cubic-bezier(0, 0.1, 0.12, 0.99) forwards;
+`;

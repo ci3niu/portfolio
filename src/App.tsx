@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import WideScreenHero from './Slides/Widescreen/HeroSlide/Hero';
+import './Assets/index.css';
 
 const GlobalStyle = createGlobalStyle`
 	html, body {

@@ -5,7 +5,7 @@ import TitleReveal from './TitleReveal';
 const NameAndTitle = () => {
 	return (
 		<Container>
-			<NameReveal text='Michał Cieniek' fontFam='South Great' timeDelay={500} />
+			<NameReveal text='Michał Cieniek' fontFam='SouthGreat' timeDelay={500} />
 			{/* <TitleReveal /> */}
 		</Container>
 	);
