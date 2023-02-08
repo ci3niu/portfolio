@@ -1,8 +1,10 @@
+import { StyledContainer } from './styles/Container.styled';
+
 const AboutMe = () => {
 	return (
-		<div style={{ height: '100vh' }}>
+		<StyledContainer>
 			<h2>AboutMe</h2>
-		</div>
+		</StyledContainer>
 	);
 };
 

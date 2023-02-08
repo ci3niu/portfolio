@@ -4,6 +4,11 @@
 }
 
 @font-face {
-	font-family: 'BergenSans';
-	src: url('./Fonts/BergenSans/BergenSans-Regular.otf');
+	font-family: 'MontserratRegular';
+	src: url('./Fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('./Fonts/Montserrat/Montserrat-Bold.ttf');
 }
