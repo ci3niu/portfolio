@@ -1,9 +1,10 @@
+import TitleScroller from '../../../components/TitleScroller/TitleScroller';
 import { StyledContainer } from './styles/Container.styled';
 
 const AboutMe = () => {
 	return (
 		<StyledContainer>
-			<h2>AboutMe</h2>
+			<TitleScroller text='About Me' />
 		</StyledContainer>
 	);
 };

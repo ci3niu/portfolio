@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './utils/GlobalStyle';
@@ -14,10 +14,6 @@ const App = () => {
 	const handleThemeToggle = () => {
 		theme.id === 'dark' ? setTheme({ ...themeDefault, ...themeLight }) : setTheme({ ...themeDefault, ...themeDark });
 	};
-
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
 
 	return (
 		<ThemeProvider theme={theme}>
