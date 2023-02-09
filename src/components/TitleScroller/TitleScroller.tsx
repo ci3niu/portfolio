@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from 'react';
-import { StyledBackgroundTitle } from './TitleScroller.styled';
+import { StyledBackgroundTitle, StyleTitleToLeft, StyleTitleToRight } from './TitleScroller.styled';
 import { TitleScrollerProps } from './TitleScroller.types';
 
-const TitleScroller: FC<TitleScrollerProps> = ({ text }) => {
+const TitleScroller: FC<TitleScrollerProps> = ({ text, multiplier, toLeft }) => {
 	const [scrollY, setScrollY] = useState(0);
 
 	const handleScroll = () => {
@@ -16,11 +16,21 @@ const TitleScroller: FC<TitleScrollerProps> = ({ text }) => {
 		};
 	}, []);
 
+	if (toLeft) {
+		return (
+			<>
+				<StyleTitleToLeft scroll={scrollY} multiplier={multiplier}>
+					{text}
+				</StyleTitleToLeft>
+			</>
+		);
+	}
+
 	return (
 		<>
-			<StyledBackgroundTitle scroll={scrollY} multiplier={50}>
+			<StyleTitleToRight scroll={scrollY} multiplier={multiplier}>
 				{text}
-			</StyledBackgroundTitle>
+			</StyleTitleToRight>
 		</>
 	);
 };

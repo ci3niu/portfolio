@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './utils/GlobalStyle';
@@ -10,6 +10,7 @@ import StyledWrapper from './components/Wrapper.styled';
 import ThemeButton from './components/ThemeButton/ThemeButton';
 import NameAndTitle from './Slides/Widescreen/NameAndTitle';
 import AboutMe from './Slides/Widescreen/AboutMe';
+import Skills from './Slides/Widescreen/Skills';
 
 const App = () => {
 	const [theme, setTheme] = useState(themeDefault);
@@ -25,6 +26,7 @@ const App = () => {
 				<ThemeButton handleThemeToggle={handleThemeToggle} themeId={theme.id} />
 				<NameAndTitle />
 				<AboutMe />
+				<Skills />
 			</StyledWrapper>
 		</ThemeProvider>
 	);
