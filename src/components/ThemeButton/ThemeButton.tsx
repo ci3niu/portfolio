@@ -1,12 +1,7 @@
 import { StyledThemeButton } from './ThemeButton.styled';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { FC, useEffect, useState } from 'react';
-import { keyframes } from 'styled-components';
-
-interface ThemeButtonProps {
-	themeId: string | undefined;
-	handleThemeToggle: React.MouseEventHandler<HTMLButtonElement>;
-}
+import { ThemeButtonProps } from './ThemeButton.types';
 
 const ThemeButton: FC<ThemeButtonProps> = ({ themeId, handleThemeToggle }) => {
 	const [reveal, setReveal] = useState(false);

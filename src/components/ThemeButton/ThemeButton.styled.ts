@@ -1,8 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-
-interface StyledThemeButtonProps {
-	reveal: boolean;
-}
+import { StyledThemeButtonProps } from './ThemeButton.types';
 
 const showThemeButton = () => keyframes`
 0%{
