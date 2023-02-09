@@ -7,6 +7,7 @@ const ScrollCTA = () => {
 	const [scrollY, setScrollY] = useState(0);
 
 	const revealText = (timeout: number) => {
+		setReveal(false);
 		setTimeout(() => {
 			setReveal(true);
 		}, timeout);
@@ -27,7 +28,7 @@ const ScrollCTA = () => {
 
 	return (
 		<StyledScrollCTA reveal={reveal}>
-			Scroll
+			SCROLL
 			<BsChevronDown />
 		</StyledScrollCTA>
 	);

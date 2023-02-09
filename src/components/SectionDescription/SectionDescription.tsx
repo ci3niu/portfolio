@@ -11,7 +11,7 @@ const StyledDescription = styled.div`
 	top: 17%;
 	font-family: 'MontserratRegular';
 	font-size: 3rem;
-	width: 50%;
+	width: 60%;
 	text-align: end;
 `;
 

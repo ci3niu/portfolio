@@ -6,7 +6,7 @@ const AboutMe = () => {
 	return (
 		<StyledContainer>
 			<TitleScroller text='About Me' />
-			<SectionDescription text='Some text about me. Probably nothing important here.' />
+			<SectionDescription text='Over the last few years, I have allowed myself to enter the world of programming. I pride myself on willingness and ability to learn.' />
 		</StyledContainer>
 	);
 };
