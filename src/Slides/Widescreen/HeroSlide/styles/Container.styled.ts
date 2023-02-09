@@ -6,4 +6,5 @@ export const StyledContainer = styled.div`
 	height: 120vh;
 	width: 100%;
 	position: relative;
+	overflow-x: hidden;
 `;

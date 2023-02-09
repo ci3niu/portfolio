@@ -8,6 +8,8 @@ import './Assets/index.css';
 import WideScreenHero from './Slides/Widescreen/HeroSlide/Hero';
 import StyledWrapper from './components/Wrapper.styled';
 
+import ThemeButton from './components/ThemeButton/ThemeButton';
+
 const App = () => {
 	const [theme, setTheme] = useState(themeDefault);
 
@@ -19,7 +21,7 @@ const App = () => {
 		<ThemeProvider theme={theme}>
 			<StyledWrapper>
 				<GlobalStyle />
-				<button onClick={handleThemeToggle}>^</button>
+				<ThemeButton handleThemeToggle={handleThemeToggle} themeId={theme.id} />
 				<WideScreenHero />
 			</StyledWrapper>
 		</ThemeProvider>
