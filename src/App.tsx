@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './utils/GlobalStyle';
 import { themeDefault, themeLight, themeDark } from './utils/Themes';
 import './Assets/index.css';
 
-import WideScreenHero from './Slides/Widescreen/HeroSlide/Hero';
 import StyledWrapper from './components/Wrapper.styled';
 
 import ThemeButton from './components/ThemeButton/ThemeButton';
+import NameAndTitle from './Slides/Widescreen/NameAndTitle';
+import AboutMe from './Slides/Widescreen/AboutMe';
 
 const App = () => {
 	const [theme, setTheme] = useState(themeDefault);
@@ -22,7 +23,8 @@ const App = () => {
 			<StyledWrapper>
 				<GlobalStyle />
 				<ThemeButton handleThemeToggle={handleThemeToggle} themeId={theme.id} />
-				<WideScreenHero />
+				<NameAndTitle />
+				<AboutMe />
 			</StyledWrapper>
 		</ThemeProvider>
 	);

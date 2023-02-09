@@ -18,7 +18,7 @@ const ThemeButton: FC<ThemeButtonProps> = ({ themeId, handleThemeToggle }) => {
 	};
 
 	useEffect(() => {
-		revealText(5000);
+		revealText(4000);
 	}, []);
 
 	return (

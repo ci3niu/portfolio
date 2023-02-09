@@ -7,22 +7,23 @@ interface TitleScrollerProps {
 
 interface StyledBackgroundTitle {
 	scroll: number;
+	multiplier: number;
 }
-
 const StyledBackgroundTitle = styled.div<StyledBackgroundTitle>`
+	position: absolute;
 	font-size: 20rem;
 	font-family: 'MontserratRegular';
 	color: ${({ theme }) => theme.colorText};
 	opacity: 0.1;
-	left: -35%;
-	transform: translateX(${({ scroll }) => scroll / 100}%);
+	left: -15%;
+	transform: translateX(${({ scroll, multiplier }) => scroll / multiplier}%);
 	transition: transform 0.5s ease-out;
 `;
 
 const TitleScroller: FC<TitleScrollerProps> = ({ text }) => {
 	const [scrollY, setScrollY] = useState(0);
 
-	const handleScroll = (e: any) => {
+	const handleScroll = () => {
 		setScrollY(window.scrollY);
 	};
 
@@ -35,7 +36,9 @@ const TitleScroller: FC<TitleScrollerProps> = ({ text }) => {
 
 	return (
 		<>
-			<StyledBackgroundTitle scroll={scrollY}>{text}</StyledBackgroundTitle>
+			<StyledBackgroundTitle scroll={scrollY} multiplier={50}>
+				{text}
+			</StyledBackgroundTitle>
 		</>
 	);
 };

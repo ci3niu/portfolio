@@ -5,6 +5,7 @@ const StyledWrapper = styled.div`
 	color: ${({ theme }) => theme.colorText};
 	transition: background-color 0.5s;
 	width: 100%;
+	height: 100%;
 `;
 
 export default StyledWrapper;

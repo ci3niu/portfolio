@@ -1,5 +1,5 @@
-import { StyledContainer } from './styles/Container.styled';
-import TextToReveal from '../../../components/TextToReveal/TextToReveal';
+import { StyledContainer } from '../../utils/Container.styled';
+import TextToReveal from '../../components/TextToReveal/TextToReveal';
 import styled from 'styled-components';
 
 const StyledHeroContainer = styled(StyledContainer)`
@@ -15,7 +15,7 @@ const NameAndTitle = () => {
 			<TextToReveal text='Michał Cieniek' fontFam='SouthGreat' delay={800} fontSize={200} />
 			<TextToReveal
 				text='Front-End Developer & Design Enthusiast'
-				fontFam='MontserratRegular'
+				fontFam='MontserratBold'
 				delay={1600}
 				fontSize={40}
 			/>
