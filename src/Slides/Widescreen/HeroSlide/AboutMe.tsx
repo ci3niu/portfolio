@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import TitleScroller from '../../../components/TitleScroller/TitleScroller';
 import { StyledContainer } from './styles/Container.styled';
 
