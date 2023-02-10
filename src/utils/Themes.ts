@@ -6,7 +6,7 @@ interface ITheme {
 }
 
 export const themeDefault: ITheme = {
-	colorPrimary: '#8795e8',
+	colorPrimary: '#94d0ff',
 	colorBackground: '#fff',
 	colorText: '#000',
 };

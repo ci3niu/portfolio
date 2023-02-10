@@ -15,7 +15,6 @@ const ScrollCTA = () => {
 
 	const handleScroll = () => {
 		setScrollY(window.scrollY);
-		console.log(scrollY);
 	};
 
 	useEffect(() => {

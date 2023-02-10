@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { StyledBackgroundTitle, StyleTitleToLeft, StyleTitleToRight } from './TitleScroller.styled';
+import { StyleTitleToLeft, StyleTitleToRight } from './TitleScroller.styled';
 import { TitleScrollerProps } from './TitleScroller.types';
 
 const TitleScroller: FC<TitleScrollerProps> = ({ text, multiplier, toLeft }) => {
