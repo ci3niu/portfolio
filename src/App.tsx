@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from './utils/GlobalStyle';
 import { themeDefault, themeLight, themeDark } from './utils/Themes';
+import GlobalStyle from './utils/GlobalStyle';
 import './Assets/index.css';
 
 import StyledWrapper from './components/Wrapper.styled';
-
 import ThemeButton from './components/ThemeButton/ThemeButton';
-import NameAndTitle from './Slides/Widescreen/NameAndTitle';
-import AboutMe from './Slides/Widescreen/AboutMe';
-import Skills from './Slides/Widescreen/Skills';
+import { NameAndTitle, AboutMe, Skills, Projects, Contact } from './Slides/Widescreen/_index';
 
 const App = () => {
 	const [theme, setTheme] = useState(themeDefault);
@@ -31,6 +28,8 @@ const App = () => {
 				<NameAndTitle />
 				<AboutMe />
 				<Skills />
+				<Projects />
+				<Contact />
 			</StyledWrapper>
 		</ThemeProvider>
 	);

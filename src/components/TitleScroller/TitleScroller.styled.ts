@@ -7,15 +7,15 @@ export const StyledBackgroundTitle = styled.div<StyledBackgroundTitleProps>`
 	font-family: 'MontserratRegular';
 	color: ${({ theme }) => theme.colorText};
 	opacity: 0.1;
-
 	transition: transform 0.5s ease-out;
+	display: flex;
 `;
 
-export const StyleTitleToLeft = styled(StyledBackgroundTitle)`
-	left: -15%;
+export const StyleTitleToRight = styled(StyledBackgroundTitle)`
+	left: -${({ multiplier }) => multiplier / 3}%;
 	transform: translateX(${({ scroll, multiplier }) => scroll / multiplier}%);
 `;
-export const StyleTitleToRight = styled(StyledBackgroundTitle)`
-	right: -25%;
+export const StyleTitleToLeft = styled(StyledBackgroundTitle)`
+	right: -${({ multiplier }) => multiplier}%;
 	transform: translateX(-${({ scroll, multiplier }) => scroll / multiplier}%);
 `;

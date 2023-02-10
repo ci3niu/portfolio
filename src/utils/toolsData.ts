@@ -7,23 +7,31 @@ import {
 	GithubIcon,
 	ReduxLogo,
 	ReactRouterIcon,
-} from '../Assets/Img';
+} from '../Assets/Img/_index';
 
 export const toolsData = [
 	{
-		name: 'React',
-		icon: ReactLogo,
-	},
-	{
 		name: 'JavaScript',
 		icon: JavaScriptLogo,
+	},
+	{
+		name: 'React',
+		icon: ReactLogo,
 	},
 	{
 		name: 'TypeScript',
 		icon: TypeScriptLogo,
 	},
 	{
-		name: 'styled-components',
+		name: 'Redux',
+		icon: ReduxLogo,
+	},
+	{
+		name: 'React Router',
+		icon: ReactRouterIcon,
+	},
+	{
+		name: 'styled components',
 		icon: StyledComponentsIcon,
 	},
 	{
@@ -33,13 +41,5 @@ export const toolsData = [
 	{
 		name: 'Github',
 		icon: GithubIcon,
-	},
-	{
-		name: 'Redux',
-		icon: ReduxLogo,
-	},
-	{
-		name: 'React Router',
-		icon: ReactRouterIcon,
 	},
 ];

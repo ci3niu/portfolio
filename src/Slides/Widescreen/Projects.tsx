@@ -2,13 +2,13 @@ import SectionDescription from '../../components/SectionDescription/SectionDescr
 import TitleScroller from '../../components/TitleScroller/TitleScroller';
 import { StyledContainer } from '../../utils/Container.styled';
 
-const AboutMe = () => {
+const Projects = () => {
 	return (
 		<StyledContainer>
-			<TitleScroller text='About Me' multiplier={48} />
-			<SectionDescription text='Over the last few years, I have allowed myself to enter the world of programming. I pride myself on willingness and ability to learn.' />
+			<TitleScroller text='Projects' multiplier={76} />
+			<SectionDescription text={`Recent projects that I've worked on.`} />
 		</StyledContainer>
 	);
 };
 
-export default AboutMe;
+export default Projects;
