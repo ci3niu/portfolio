@@ -3,27 +3,30 @@ import SectionDescription from '../../components/SectionDescription/SectionDescr
 import TitleScroller from '../../components/TitleScroller/TitleScroller';
 import { StyledContainer } from '../../utils/Container.styled';
 import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
+import photobuffImage from '../../Assets/Img/projects/photobuff.jpg';
+import recipeappImage from '../../Assets/Img/projects/recipeapp.jpg';
+import shopspaImage from '../../Assets/Img/projects/shopspa.jpg';
 
 const projectsData = [
 	{
 		name: 'photoBuff',
 		linkGH: 'https://github.com/ci3niu/react-photobuff',
 		linkDemo: 'https://ci3niu.github.io/react-photobuff/',
-		image: '',
-		tools: ['React', 'TypeScript', 'styled-components', 'react-responsive-carousel', 'react-typed'],
+		image: photobuffImage,
+		tools: ['React', 'TypeScript', 'styled-components', 'responsive-carousel', 'react-typed'],
 	},
 	{
 		name: 'shopSPA',
 		linkGH: 'https://github.com/ci3niu/react-shop-spa',
 		linkDemo: 'https://ci3niu.github.io/react-shop-spa/',
-		image: '',
+		image: shopspaImage,
 		tools: ['React', 'REST API', 'useReducer', 'ChakraUI'],
 	},
 	{
 		name: 'recipeApp',
 		linkGH: 'https://github.com/ci3niu/vanillaJs-recipe-app',
 		linkDemo: 'https://ci3niu.github.io/vanillaJs-recipe-app/',
-		image: '',
+		image: recipeappImage,
 		tools: ['JavaScript', 'REST API', 'SASS'],
 	},
 ];
@@ -32,7 +35,7 @@ const StyledProjectsContainer = styled(StyledContainer)`
 	height: 180vh;
 `;
 
-const Asd = styled.div`
+const StyledProjectsStructure = styled.div`
 	position: absolute;
 	top: 33%;
 	display: flex;
@@ -45,11 +48,38 @@ const SingleProjectContainer = styled.div`
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
-	max-width: 20%;
+	align-items: center;
+	max-width: 25%;
+	padding: 0 1rem;
+	border: 1px solid ${({ theme }) => theme.colorPrimary};
+	border-radius: 1rem;
 	a {
 		text-decoration: none;
 		color: ${({ theme }) => theme.colorText};
 	}
+`;
+
+const StyledProjectTitle = styled.h2`
+	font-size: 2.4rem;
+`;
+
+const StyledImageContainer = styled.div`
+	max-width: 80%;
+	border-radius: 1rem;
+	overflow: hidden;
+`;
+
+const StyledLinksContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	margin-top: 1rem;
+	gap: 2rem;
+`;
+
+const StyledLinkContainer = styled.div`
+	display: flex;
 `;
 
 const Projects = () => {
@@ -57,29 +87,32 @@ const Projects = () => {
 		<StyledProjectsContainer>
 			<TitleScroller text='Projects' multiplier={76} />
 			<SectionDescription text={`Recent projects that I've worked on.`} />
-			<Asd>
+			<StyledProjectsStructure>
 				{projectsData.map((project) => {
 					const { name, linkGH, linkDemo, image, tools } = project;
 					return (
 						<SingleProjectContainer>
-							<p style={{ marginLeft: '2rem', fontSize: '2rem' }}>{name}</p>
+							<StyledProjectTitle>{name}</StyledProjectTitle>
 
-							<p style={{ alignSelf: 'center', fontSize: '3rem', marginBottom: '0' }}>[...]</p>
-							<p style={{ alignSelf: 'center', fontSize: '3rem' }}>[IMAGE HERE]</p>
+							<StyledImageContainer>
+								<img src={image} alt={name} style={{ width: '100%', objectFit: 'cover', opacity: '0.9' }} />
+							</StyledImageContainer>
 
-							<div style={{ display: 'flex', alignItems: 'center', padding: '1rem' }}>
-								<AiOutlineGithub fill='#94d0ff' size={20} opacity='0.75' />
-								<a href={linkGH} target='_blank'>
-									{linkGH}
-								</a>
-							</div>
+							<StyledLinksContainer>
+								<StyledLinkContainer>
+									<AiOutlineGithub fill='#94d0ff' size={20} opacity='0.75' />
+									<a href={linkGH} target='_blank'>
+										{linkGH}
+									</a>
+								</StyledLinkContainer>
+								<StyledLinkContainer>
+									<AiOutlineLink fill='#94d0ff' size={20} opacity='0.75' />
+									<a href={linkDemo} target='_blank'>
+										{linkDemo}
+									</a>
+								</StyledLinkContainer>
+							</StyledLinksContainer>
 
-							<div style={{ display: 'flex', alignItems: 'center', padding: '1rem' }}>
-								<AiOutlineLink fill='#94d0ff' size={20} opacity='0.75' />
-								<a href={linkDemo} target='_blank'>
-									{linkDemo}
-								</a>
-							</div>
 							<div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' }}>
 								<p style={{ fontSize: '2rem' }}>Tools used:</p>
 								<div>
@@ -88,7 +121,7 @@ const Projects = () => {
 											style={{
 												margin: '0.5rem',
 												backgroundColor: '#94d0ffBF',
-												padding: '0.6rem 0',
+												padding: '1rem',
 												borderRadius: '10%',
 												textAlign: 'center',
 											}}
@@ -101,7 +134,7 @@ const Projects = () => {
 						</SingleProjectContainer>
 					);
 				})}
-			</Asd>
+			</StyledProjectsStructure>
 		</StyledProjectsContainer>
 	);
 };
